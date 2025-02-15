@@ -1,0 +1,580 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/Background.png') center center/cover no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    color: #fff;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark background to make the text more readable */
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Text shadow to make it stand out */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better contrast */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(1);
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 50px; /* Additional space at the bottom of each section */
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.projects-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 23%; /* This percentage allows me to place 4 projects in a row */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Ensures the buttons are aligned at the bottom */
+    min-height: 400px; /* I use min-height instead of height to avoid it being too tall */
+}
+
+.project:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 100%;
+    height: 300px; /* I chose to use a fixed height to standardize the images */
+    object-fit: contain; /* Ensures the image covers the area without deforming */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows the text to adjust in the remaining space */
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Style only for the paragraph in the 'My Projects' section */
+#projects > p {
+    font-size: 1.1rem; 
+    color: #333; 
+    line-height: 1.8; 
+    max-width: 800px; 
+    margin: 20px auto 30px; 
+    padding: 20px; 
+    font-family: 'Roboto', sans-serif;
+    text-align: center; /* Centers the text within its container */
+    background-color: #f9f9f9; /* A light background to highlight the text */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+}
+
+#projects > p:hover {
+    background-color: #eef2f7; /* Changes background on hover */
+    transform: translateY(-5px); /* Lifting effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Increases shadow when hovering */
+}
+
+/* Button styles */
+.project .btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project .btn {
+    width: 48%; 
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex; /* Aligns the content */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; 
+}
+
+/* Preview button */
+.project .preview-btn {
+    background-color: #4CAF50;
+}
+
+.project .preview-btn:hover {
+    background-color: #45a049;
+}
+
+/* GitHub button */
+.project .github-btn {
+    background-color: #666 ;
+}
+
+.project .github-btn:hover {
+    background-color: #333;
+}
+
+/* Modal styles */
+
+/* Blocks page scrolling */
+body.modal-open {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 9999; /* Modal is on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Background with some transparency */
+    padding-top: 60px;
+}
+
+.modal .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-image {
+    max-width: 90%;
+    max-height: 80vh;
+    display: none; /* Initially hide all images */
+    object-fit: contain;
+}
+
+.carousel-image.active {
+    display: block; /* Show active image */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Style for the close button */
+span.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10000; /* Ensures the close button is on top of everything */
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the close button */
+span.close:hover,
+span.close:focus {
+    color: #ff0000; 
+    text-decoration: none;
+}
+
+/* About Section Styles */
+
+#about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+#about h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-image img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; /* Makes image circular */
+    object-fit: cover; /* Adjusts image well inside the circle */
+    border: 4px solid #4CAF50; 
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #555;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-text {
+    width: 50%; /* Adjusts size to balance with the image */
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.7;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-text p {
+    margin-bottom: 20px; /* Increases bottom margin for more separation between paragraphs */
+}
+
+/* Hover effects for the About Me section */
+.about-img:hover {
+    transform: scale(1.1); /* Increases zoom to make it more noticeable */
+}
+
+#about h2:hover {
+    color: #5a9e8f; 
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#about p:hover {
+    color: #333; 
+    font-weight: 500; 
+    transition: color 0.3s ease, font-weight 0.3s ease; /* Transition for changes */
+}
+
+.profile-image img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 4px solid #4CAF50; 
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.contact .form-group label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact .form-group input,
+.contact .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.contact .form-group input:focus,
+.contact .form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.contact .form-group textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact .btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact .btn:hover {
+    background-color: #388E3C;
+}
+
+.contact .btn:active {
+    transform: scale(0.98);
+}
+
+/* Footer Styles */
+footer {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
+    color: #fff;
+    text-align: center;
+    padding: 20px 20px; 
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    width: 100%; 
+    box-sizing: border-box; /* Prevents padding from adding extra space */
+    clear: both; /* Ensures no floats below the footer */
+}
+
+footer h3, footer p, footer .social-icons, footer .copyright {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.footer-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ff9800;
+}
+
+footer .social-icons i {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover i {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    text-align: center;
+}
+
+footer .copyright {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+footer .copyright a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer .copyright a:hover {
+    color: #ff9800;
+}

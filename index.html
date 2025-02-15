@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navigation Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+<!-- Home Section -->
+<section id="home" class="hero">
+    <div class="intro">
+        <h1>Hi, I'm Rbrudev!</h1>
+        <p>I'm a self-taught web developer, passionate about solving real-world problems through creative and efficient solutions. I started my programming journey independently and have been honing my skills ever since. My goal is to help others bring their ideas to life and continuously improve my craft by tackling new challenges and learning from each project I work on.</p>
+        <a href="#projects" class="btn">See My Projects</a>
+    </div>
+</section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+            <p>Here are some projects that I have worked on, each representing a different challenge and a chance to apply the skills I've learned so far. I enjoy solving problems with code, and I am always seeking new ways to improve my work. I'm continuously learning and eager to collaborate on new projects that allow me to help others bring their ideas to life.</p>
+
+            <div class="projects-gallery">
+<!-- Project 1 -->
+<div class="project">
+    <img src="/Portfolio/images/PImage-AppCR..png" alt="Project 1">
+    <h3>Project 1: University Life Guide (Java)</h3>
+    <p>Designed to solve a common need, this project is an app to evenly divide expenses among multiple people. Whether it's a trip or a meal, this tool makes calculations easier and avoids misunderstandings, highlighting the importance of organization in everyday situations</p>
+    <div class="btn-container">
+    <a href="https://github.com/rbrude/" target="_blank" class="btn github-btn">View on GitHub</a>
+    <a href="#" class="btn preview-btn" onclick="openModal(1)">Preview</a>
+</div>
+</div>
+
+<!-- Modal for Project 1 -->
+<div id="modal1" class="modal">
+    <span class="close" onclick="closeModal(1)">&times;</span> <!-- close button -->
+    <div class="carousel">
+        <img src="images/PImage-AppCR..png" alt="Project Image 1" class="carousel-image">
+        <!-- Video instead of image -->
+        <video class="carousel-image" src="images/AplicaciónJava2.mp4" alt="Project Video" controls>
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <button class="prev" onclick="changeImage(-1, 1)">&#10094;</button>
+    <button class="next" onclick="changeImage(1, 1)">&#10095;</button>
+</div>
+
+<!-- Project 2 -->
+<div class="project">
+    <img src="/Portfolio/images/FinalCalculatorWeb.png" alt="Project 2">
+    <h3>Project 2: Web-based Final Exam Calculator</h3>
+    <p>The success of my first app inspired me to improve it. I decided to create a web version of the final exam calculator that I previously built as a desktop app in Java. Using tools like HTML, CSS, and JavaScript, I created a much more accessible and user-friendly website for students, providing an enhanced experience.</p>
+    <div class="btn-container">
+    <a href="https://github.com/rbrude/ExamCalculator" target="_blank" class="btn github-btn">View on GitHub</a>
+    <a href="#" class="btn preview-btn" onclick="openModal(2)">Preview</a>
+    
+</div>
+</div>
+
+<!-- Modal for Project 2 -->
+<div id="modal2" class="modal">
+    <span class="close" onclick="closeModal(2)">&times;</span> <!-- Close button -->
+    <div class="carousel">
+        <img src="images/FinalCalculatorWeb.png" alt="Project Image 1" class="carousel-image">
+        <img src="images/FinalCalculatorWeb-EN.png" alt="Project Image 2" class="carousel-image">
+        <img src="images/FinalCalculatorError1.png" alt="Project Image 3" class="carousel-image">
+        <img src="images/FinalCalculatorError2.png" alt="Project Image 3" class="carousel-image">
+        <img src="images/Calculation.png" alt="Project Image 3" class="carousel-image">
+    </div>
+    <button class="prev" onclick="changeImage(-1, 2)">&#10094;</button>
+    <button class="next" onclick="changeImage(1, 2)">&#10095;</button>
+</div>
+
+
+     <!-- Project 3 -->
+<div class="project">
+    <img src="/Portfolio/images/HomeBanking.png" alt="Project 3">
+    <h3>Project 3: Simulated Bank Website with Python Backend</h3>
+    <p>My passion for backend development led me to apply for a Python study scholarship. In this project, I developed a comprehensive website for a bank, from the front end using HTML, CSS, and JavaScript, to the backend management with Python, aiming to enhance my skills in building full-fledged applications.</p>
+    <div class="btn-container">
+    <a href="https://github.com/julimr/HomeBanking_ITBA" target="_blank" class="btn github-btn">View on GitHub</a>
+    <a href="#" class="btn preview-btn" onclick="openModal(3)">Preview</a>
+</div>
+</div>
+
+<!-- Modal for Project 3 -->
+<div id="modal3" class="modal">
+    <span class="close" onclick="closeModal(3)">&times;</span> <!-- Close button -->
+    <div class="carousel">
+        <img src="images/HomeBanking.png" alt="Project Image 1" class="carousel-image">
+        <img src="images/LandinPage.png" alt="Project Image 2" class="carousel-image">
+        <img src="images/LogInHBpng.png" alt="Project Image 3" class="carousel-image">
+        <img src="images/RecoverPage.png" alt="Project Image 3" class="carousel-image">
+        <img src="images/RegistrationPage.png" alt="Project Image 3" class="carousel-image">
+        <img src="images/ContactPage.png" alt="Project Image 3" class="carousel-image">
+    </div>
+    <button class="prev" onclick="changeImage(-1, 3)">&#10094;</button>
+    <button class="next" onclick="changeImage(1, 3)">&#10095;</button>
+</div>
+
+<!-- Project 4 -->
+<div class="project">
+    <img src="/Portfolio/images/AppDeGastos.png" alt="Project 4">
+    <h3>Project 4: Shared Expenses Calculator</h3>
+    <p>Designed to solve a common need, this project is an app to evenly divide expenses among multiple people. Whether it's a trip or a meal, this tool makes calculations easier and avoids misunderstandings, highlighting the importance of organization in everyday situations.</p>
+    <div class="btn-container">
+
+    <a href="https://github.com/julimr/HomeBanking_ITBA/tree/main/Desafio%20App%20de%20Gastos" target="_blank" class="btn github-btn">View on GitHub</a>
+    <a href="#" class="btn preview-btn" onclick="openModal(4)">Preview</a>
+</div>
+</div>
+
+<!-- Modal for Project 4 -->
+<div id="modal4" class="modal">
+    <span class="close" onclick="closeModal(4)">&times;</span> <!-- Close button -->
+    <div class="carousel">
+        <img src="images/AppDeGastos1.png" alt="Project Image 1" class="carousel-image">
+        <img src="images/AppDeGastos.png" alt="Project Image 2" class="carousel-image">
+        <img src="images/AppdeGastosError1.png" alt="Project Image 3" class="carousel-image">
+    </div>
+    <button class="prev" onclick="changeImage(-1, 4)">&#10094;</button>
+    <button class="next" onclick="changeImage(1, 4)">&#10095;</button>
+</div>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-content">
+                <div class="profile-image">
+                    <img src="images/cv.png" alt="Your Name">
+                </div>
+            <h2>About Me</h2>
+            <p>I’m a self-taught developer with a strong curiosity and a passion for learning. My diverse background, including roles as a Physical Education teacher, Computer Science instructor, football coach, and manager of coaches, has helped me develop skills in teamwork, communication, and leadership.
+
+                As a manager of coaches, I learned the importance of listening, clear communication, and supporting team growth—skills I bring to every project I work on. I enjoy problem-solving and tackling new challenges, which has been a driving force throughout my career. My ability to adapt quickly and learn on the fly has been crucial as I transition into tech, where staying curious and solving problems is key.
+                
+                I’m excited to bring my versatility, problem-solving mindset, and experience from different fields to tech teams. I’m always eager to take on new challenges and contribute in ways that make an impact.</p>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2>Message Me</h2>
+            <p>If you want to get in touch with me, please fill out the form below.</p>
+        
+            <form action="mailto:rbrudev@gmail.com" method="POST" enctype="text/plain">                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+        
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    
+    <footer>
+        <h3>Contact Me</h3>
+        <p>Let's connect! Feel free to reach out to me via social media.</p>
+        <div class="social-icons">
+            <a href="https://ar.linkedin.com/in/rodrigo-agust%C3%ADn-brude/en" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/rbrude" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Rbrudev. All rights reserved. 
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
